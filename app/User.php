@@ -26,5 +26,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function player()
+    {
+        return $this->hasOne('App\Player');
+    }
+
 
 }

@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('pageName')
+	{{ $pageName }}
+@stop
+
 @section('content')
 
 <h1>About</h1>

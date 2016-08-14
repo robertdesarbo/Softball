@@ -1,2 +1,3 @@
 [13-Aug-2016 23:33:04 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\PagesController::about() in /var/www/html/softball/app/Http/Controllers/PagesController.php on line 21
 [14-Aug-2016 03:30:57 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /var/www/html/softball/app/Http/Controllers/PlayersController.php on line 8
+[14-Aug-2016 17:04:37 UTC] PHP Fatal error:  Cannot use App\Http\Requests as Requests because the name is already in use in /var/www/html/softball/app/Http/Controllers/PlayersController.php on line 8

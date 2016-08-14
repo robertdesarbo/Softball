@@ -14,7 +14,7 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->increments('player_id');
-            $table->unsignedInteger('user_id')->foreign('user_id')->references( 'user_id' )->on( 'users' )->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedInteger('user_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->date('date_of_birth');
@@ -24,6 +24,9 @@ class CreateTeamsTable extends Migration
             $table->smallInteger('zip');
             $table->string('gender',1);
             $table->timestamps();
+
+            $table->foreign('user_id')->references( 'user_id' )->on( 'users' )->onDelete('cascade')->onUpdate('cascade');
+
         });
 
         Schema::create('leagues', function (Blueprint $table) {
@@ -36,19 +39,25 @@ class CreateTeamsTable extends Migration
 
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('team_id');
-            $table->unsignedInteger('league_id')->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedInteger('player_id')->foreign( 'player_id' )->references( 'player_id' )->on( 'players' )->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedInteger('league_id');
+            $table->unsignedInteger('player_id');
             $table->string('team_name');
-            $table->timestamps();                
+            $table->timestamps();      
+
+            $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('player_id')->references( 'player_id' )->on( 'players' )->onDelete('cascade')->onUpdate('cascade');          
 
         });
 
         Schema::create('teams_roster', function (Blueprint $table) {
             $table->increments('team_roster_id');
-            $table->unsignedInteger('team_id')->foreign('team_id')->references( 'team_id' )->on( 'teams' )->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedInteger('player_id')->foreign('player_id')->references( 'player_id' )->on( 'players' )->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedInteger('team_id');
+            $table->unsignedInteger('player_id');
             $table->tinyInteger('active');
             $table->timestamps();
+
+            $table->foreign('team_id')->references( 'team_id' )->on( 'teams' )->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('player_id')->references( 'player_id' )->on( 'players' )->onDelete('cascade')->onUpdate('cascade');
         });
 
         Schema::create('fields', function (Blueprint $table) {
@@ -71,18 +80,24 @@ class CreateTeamsTable extends Migration
 
         Schema::create('rules', function (Blueprint $table) {
             $table->increments('rule_id');
-            $table->unsignedInteger('league_id')->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedInteger('league_id');
             $table->string('rule');
             $table->timestamps();
+
+            $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');
         });
 
         Schema::create('games', function (Blueprint $table) {
             $table->increments('game_id');
-            $table->unsignedInteger('league_id')->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedInteger('team_id')->foreign('team_id')->references( 'team_id' )->on( 'teams' )->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedInteger('field_id')->foreign('field_id')->references( 'field_id' )->on( 'fields' )->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedInteger('league_id');
+            $table->unsignedInteger('team_id');
+            $table->unsignedInteger('field_id');
             $table->dateTimeTz('game_time');
             $table->timestamps();
+
+            $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('team_id')->references( 'team_id' )->on( 'teams' )->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('field_id')->references( 'field_id' )->on( 'fields' )->onDelete('cascade')->onUpdate('cascade');
         });
 
     }

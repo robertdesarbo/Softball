@@ -2,6 +2,10 @@
 
 @section('content')
 
+@section('title')
+{{ $pageName }}
+@stop
+
 <h1>
 		Contact Me!
 </h1>

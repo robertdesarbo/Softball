@@ -8,18 +8,11 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
-     public function about()
-     {
+	public function index()
+    {
+    	$data = array( 'pageName' => "Welcome" );
 
-     	$people = [ 'me', 'myself', 'irene' ];
-
-        return view('pages.about', compact('people') );
-     }
-
-     public function contact()
-     {
-        return view('pages.contact' );
-     }
-
+        return view('pages.home', $data);
+    }
 
 }
