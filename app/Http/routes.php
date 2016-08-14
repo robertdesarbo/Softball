@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get( 'about', 'PagesController@about' );
+
+Route::get( 'contact', 'PagesController@contact' );
+
+Route::get( 'leagues', 'PagesController@leagues' );
+
+Route::get( 'teams', 'PagesController@teams' );
+
+Route::get( 'players', 'PlayersController@index' );
+Route::get( 'players/create', 'PlayersController@create' );
+Route::get( 'players/{id}', 'PlayersController@show' );
+
+Route::post( 'players', 'PlayersController@store' );

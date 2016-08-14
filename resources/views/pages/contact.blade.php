@@ -1,0 +1,13 @@
+@extends('app')
+
+@section('content')
+
+<h1>
+		Contact Me!
+</h1>
+
+@yield('footer')
+
+	<script>alert('test');</script>
+	
+@stop
