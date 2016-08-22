@@ -10,7 +10,9 @@ class PagesController extends Controller
 {
 	public function index()
     {
-    	$data = array( 'pageName' => "Welcome" );
+    	#$leagues = League::findOrFail($id);
+
+    	$data 	= array( 'pageName' => "Welcome" );
 
         return view('pages.home', $data);
     }

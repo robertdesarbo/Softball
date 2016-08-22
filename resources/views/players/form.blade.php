@@ -39,5 +39,10 @@
 		</div>
 
 		<div class="form-group">
+			{!! Form::label('team', 'Team:' ) !!}
+			{!! Form::select('team', ['Under 18', '19 to 30', 'Over 30'], null, [ 'class' => 'form-control' ]) !!}
+		</div>
+
+		<div class="form-group">
 			{!! Form::submit($submitButtonText, [ 'class' => 'btn btn-primary form-control']) !!}
 		</div>

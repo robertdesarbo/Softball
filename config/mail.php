@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => "support@LynnsSoftball.com", 'name' => "Lynn's Softball Support"],
 
     /*
     |--------------------------------------------------------------------------

@@ -1,0 +1,421 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"refresh",
+			"reboot",
+			"restart",
+			"composer",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Projects/html/softball/resources/views/auth/login.blade.php",
+		"/C/Projects/html/softball/resources/views/layouts/app.blade.php",
+		"/C/Projects/html/softball/app/Http/routes.php",
+		"/C/Projects/html/softball/app/Http/Controllers/Auth/AuthController.php",
+		"/C/Users/Robert DeSarbo/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Projects/html/softball/config/mail.php",
+		"/C/Projects/html/softball/.env",
+		"/C/Projects/html/softball/resources/views/app.blade.php",
+		"/C/Projects/html/softball/resources/views/auth/register.blade.php",
+		"/C/Projects/html/softball/gulpfile.js",
+		"/C/Users/Robert DeSarbo/Documents/Projects/Sports/app/views/layouts/layout.blade.php",
+		"/C/Projects/html/softball/bower_components/fontawesome/.bower.json",
+		"/C/Projects/html/softball/bower.json",
+		"/C/Projects/html/softball/bower_components/font-awesome/.bower.json",
+		"/C/Projects/html/softball/resources/views/pages/home.blade.php",
+		"/C/Projects/html/softball/public/css/app.css.map",
+		"/C/Projects/html/softball/resources/assets/sass/app.scss",
+		"/C/Projects/html/softball/public/assets/stylesheets/styles.css",
+		"/C/Users/Robert DeSarbo/Desktop/sb-admin-laravel-master/app/views/layouts/dashboard.blade.php",
+		"/C/Projects/html/softball/bootstrap/app.php",
+		"/C/Projects/html/softball/app/Http/Controllers/PagesController.php",
+		"/C/Users/Robert DeSarbo/Documents/Projects/Sports/app/controllers/UserController.php",
+		"/C/Users/Robert DeSarbo/Documents/Projects/Sports/app/routes.php",
+		"/C/Users/Robert DeSarbo/Desktop/sb-admin-laravel-master/app/views/layouts/plane.blade.php",
+		"/C/Users/Robert DeSarbo/AppData/Local/Temp/Rar$DIa0.965/chat.php",
+		"/C/Projects/html/softball/app/User.php",
+		"/C/Projects/html/softball/composer.json",
+		"/C/Users/Robert DeSarbo/Desktop/sb-admin-laravel-5-master/gulpfile.js",
+		"/C/Users/Robert DeSarbo/Desktop/sb-admin-laravel-5-master/package.json",
+		"/C/Projects/html/softball/package.json",
+		"/C/Users/Robert DeSarbo/Desktop/sb-admin-laravel-5-master/composer.json",
+		"/C/Projects/html/softball/readme.md",
+		"/C/Users/Robert DeSarbo/Desktop/sb-admin-laravel-5-master/bower.json",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/js/smartwidgets/jarvis.widget.min.js",
+		"/C/Projects/html/softball/public/.htaccess",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/smartadmin-production-plugins.min.css",
+		"/C/Projects/html/softball/app/Http/Controllers/PlayersController.php",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/invoice.min.css",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/font-awesome.min.css",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/lockscreen.min.css",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/smartadmin-rtl.min.css",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/smartadmin-skins.min.css",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/bootstrap.min.css",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/demo.min.css",
+		"/C/Users/Robert DeSarbo/Desktop/DEVELOPER/PHP_HTML_Version_v1.8.1/css/smartadmin-production.min.css",
+		"/C/Projects/html/softball/resources/views/pages/contact.blade.php",
+		"/C/Users/Robert DeSarbo/Documents/Projects/Sports/app/views/home.blade.php",
+		"/C/Projects/html/softball/resources/views/pages/about.blade.php",
+		"/C/Projects/html/personal/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/C/Projects/html/softball/resources/views/players/create.blade.php",
+		"/C/Projects/html/softball/resources/views/players/edit.blade.php",
+		"/C/Projects/html/softball/resources/views/players/partials/partials.blade.php",
+		"/C/Projects/html/softball/resources/views/players/form.blade.php",
+		"/C/Projects/html/softball/resources/views/errors/list.blade.php",
+		"/C/Projects/html/softball/app/Http/Requests/PlayerRequest.php",
+		"/C/Projects/html/softball/app/Player.php",
+		"/C/Projects/html/softball/database/migrations/2016_08_14_005344_create_teams_table.php",
+		"/C/Projects/html/softball/resources/views/players/show.blade.php",
+		"/C/Projects/html/softball/resources/views/players/index.blade.php",
+		"/C/Projects/html/softball/app/Game.php",
+		"/C/Projects/html/softball/config/app.php",
+		"/C/Projects/Vagrantfile",
+		"/C/Projects/html/softball/config/database.php",
+		"/C/Projects/html/softball/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/Users/Robert DeSarbo/Documents/Projects/Sports/app/database/migrations/2014_07_27_184803_multiple_tables.php",
+		"/C/Projects/html/personal/config/database.php",
+		"/C/php/php.ini",
+		"/C/Users/Robert DeSarbo/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Robert DeSarbo/Documents/Projects/Sports/app/controllers/PaymentController.php",
+		"/C/Projects/html/personal/.gitignore",
+		"/C/Projects/html/personal/storage/framework/cache/.gitignore",
+		"/C/Projects/html/personal/storage/framework/sessions/.gitignore",
+		"/C/Projects/html/personal/storage/cms/cache/.gitignore",
+		"/C/Projects/html/personal/storage/cms/twig/.gitignore",
+		"/C/Projects/html/personal/storage/cms/combiner/assets/.gitignore",
+		"/C/Projects/html/personal/index.php",
+		"/C/Projects/html/personal/themes/portfolio/assets/css/app.css",
+		"/C/Projects/html/personal/themes/portfolio/content/about.md",
+		"/C/Projects/html/personal/themes/portfolio/assets/js/app.js",
+		"/C/Projects/html/personal/themes/portfolio/pages/home.htm",
+		"/C/Projects/html/personal/themes/portfolio/layouts/portfolio.htm",
+		"/C/Projects/html/personal/themes/portfolio/content/welcome.md",
+		"/C/Projects/html/personal/themes/portfolio/partials/nav.htm",
+		"/C/Projects/html/personal/storage/framework/sessions/0a741fc292f380472c5bc52dcafbbfca0a30b4c9",
+		"/C/Projects/html/personal/storage/cms/.gitignore",
+		"/C/Users/Robert DeSarbo/Desktop/Random Swag/README.md",
+		"/C/Users/Robert DeSarbo/Desktop/Random Swag/USB Save/lauren/Public/Videos/Sample Videos/desktop.ini",
+		"/C/Projects/html/personal/themes/portfolio/partials/footer.htm",
+		"/C/Projects/html/personal/themes/portfolio/assets/bootstrap/js/transition.js",
+		"/C/Users/Robert DeSarbo/Desktop/816KPMNUS2.jpg",
+		"/C/Projects/html/personal/themes/portfolio/assets/jquery-smooth-scroll/jquery.smooth-scroll.min.js",
+		"/C/Projects/html/personal/artisan",
+		"/C/Projects/html/personal/themes/portfolio/content/home.md",
+		"/C/Projects/html/personal/themes/portfolio/layout/portfolio.htm",
+		"/C/Projects/html/personal/themes/portfolio/theme.yaml",
+		"/C/Projects/html/personal/themes/portfolio/composer.json",
+		"/C/Projects/html/personal/themes/portfolio/assets/bootstrap/css/bootstrap-theme.min.css",
+		"/C/Projects/html/personal/README.md"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Projects\\html\\softball",
+			"C:\\Projects\\Sports\\",
+			"C:\\Projects\\html\\",
+			"C:\\Projects\\html\\personal\\themes\\portfolio\\",
+			"C:\\Projects\\html\\personal\\themes"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"layouts.app",
+			"btn btn-primary",
+			"Login",
+			"E-Mail Address",
+			"link",
+			"bg-inverse",
+			"bootstrap",
+			"People I Like",
+			"People I Like\n",
+			"SB",
+			"pageName",
+			"title",
+			"HtmlServiceProvider",
+			"user_id",
+			"users",
+			"root",
+			"mbstring",
+			"I am a 5+ year web developer focused on making the web a better place.  ",
+			"Projects",
+			"hough I do enjoy working front end my skill",
+			"I am a 5+ year web developer focused on making the web a better pl",
+			".nav>li>a:focus",
+			".navbar-brand",
+			"4E7EAF",
+			"I am a 5+ year web developer focused ",
+			"hank-you for visiting my website! I hope you find it intere",
+			"eee",
+			"margin-top",
+			"eee",
+			"1px solid #eee",
+			"hr",
+			"clearfix",
+			";\n",
+			".well",
+			"337ab7",
+			"content ",
+			"align",
+			"36px",
+			"body",
+			"assets/bootstrap/css/",
+			"5",
+			"open",
+			"extension"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"335677"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "personal.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mail.php",
+				"html\\softball\\config\\mail.php"
+			],
+			[
+				".env",
+				"html\\softball\\.env"
+			],
+			[
+				"softballlayouts",
+				"html\\softball\\resources\\views\\layouts\\app.blade.php"
+			],
+			[
+				"gulp",
+				"html\\softball\\gulpfile.js"
+			],
+			[
+				"layouts.app",
+				"Sports\\app\\views\\layouts\\layout.blade.php"
+			],
+			[
+				"login.",
+				"html\\softball\\resources\\views\\auth\\login.blade.php"
+			],
+			[
+				"authcontroll",
+				"html\\softball\\app\\Http\\Controllers\\Auth\\AuthController.php"
+			],
+			[
+				"routes",
+				"html\\softball\\app\\Http\\routes.php"
+			],
+			[
+				"assets/stylesheets/styles.css",
+				"html\\softball\\public\\assets\\stylesheets\\styles.css"
+			],
+			[
+				"pagescontroller",
+				"html\\softball\\app\\Http\\Controllers\\PagesController.php"
+			],
+			[
+				"usercontroller",
+				"Sports\\app\\controllers\\UserController.php"
+			],
+			[
+				"route",
+				"Sports\\app\\routes.php"
+			],
+			[
+				"playercontr",
+				"html\\softball\\app\\Http\\Controllers\\PlayersController.php"
+			],
+			[
+				"authcontroller",
+				"html\\softball\\app\\Http\\Controllers\\Auth\\AuthController.php"
+			],
+			[
+				"user",
+				"html\\softball\\app\\User.php"
+			],
+			[
+				"player",
+				"html\\softball\\app\\Player.php"
+			],
+			[
+				"createpal",
+				"html\\softball\\app\\Http\\Requests\\CreatePlayer.php"
+			],
+			[
+				"game",
+				"html\\softball\\app\\Game.php"
+			],
+			[
+				"pages",
+				"html\\softball\\app\\Http\\Controllers\\PagesController.php"
+			],
+			[
+				"pla",
+				"html\\softball\\app\\Player.php"
+			],
+			[
+				"playercontroller",
+				"html\\softball\\app\\Http\\Controllers\\PlayerController.php"
+			],
+			[
+				"about.blade",
+				"html\\softball\\resources\\views\\pages\\about.blade.php"
+			],
+			[
+				"about.md",
+				"personal\\themes\\portfolio\\content\\about.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Projects\\html\\softball\\Softball.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 436.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

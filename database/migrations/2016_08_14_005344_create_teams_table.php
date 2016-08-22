@@ -109,13 +109,14 @@ class CreateTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('players');
-        Schema::drop('leagues');
-        Schema::drop('teams');
-        Schema::drop('teams_roster');
-        Schema::drop('fields');
         Schema::drop('umpires');
         Schema::drop('rules');
         Schema::drop('games');
+        Schema::drop('fields');
+        Schema::drop('teams_roster');
+        Schema::drop('teams');
+        Schema::drop('players');
+        Schema::drop('leagues');
+      
     }
 }

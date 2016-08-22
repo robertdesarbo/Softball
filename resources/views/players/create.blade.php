@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-	<h1>Create a New Player</h1>
+	<h2>New Player</h2>
 
 	<hr>
 
@@ -11,6 +11,6 @@
 
 	{!! Form::close() !!}
 
-	@include( 'errors.list' );
+	@include( 'errors.list' )
 
 @stop	

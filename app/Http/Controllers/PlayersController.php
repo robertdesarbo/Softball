@@ -8,16 +8,18 @@ use Request;
 
 use App\Http\Requests;
 use App\Http\Requests\PlayerRequest;
+use App\Http\Requests\SearchRequest;
 
 class PlayersController  extends Controller
 {
 
 	public function index() 
 	{
-		$players = Player::latest()->NYState()->get();
+		$players = null;
 
-		return view( 'players.index', compact( 'players' ) );
+		return view( 'players.search', compact( 'players' ) );
 	}
+
 
 	public function show($id) 
 	{
@@ -58,6 +60,19 @@ class PlayersController  extends Controller
 		$players = Player::findOrFail($id);
 
 		return view( 'players.edit', compact( 'players' ) );
+	}
+
+	public function search(SearchRequest $request) 
+	{
+		$input = $request->all();
+
+		#Search on Last Name
+		if( $input[ 'search_type' ] == 0 )
+		{
+			$players = Player::where( 'last_name', 'LIKE', '%'.$input[ 'search_info' ].'%' )->orderBy('last_name', 'asc')->get();
+		}
+
+		return view( 'players.search', compact( 'players' ) );
 	}
 
 	public function update($id, PlayerRequest $request) 
