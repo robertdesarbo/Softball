@@ -13,19 +13,23 @@ class Player extends Model
         'name', 'email', 'password',
     ];
 
-	public function scopeNYState($query)
-    {
-    	$query->where( 'state', '=', 'NY' );
-    }
-
     public function setDateOfBirthAtrribute($date)
     {
     	$this->attributes[ 'date_of_birth' ] = Carbon::parse( $date );
     }
 
-    public function user( )
+    public function user()
     {
     	return $this->belongsTo('App\User');
     }
+
+    public function teamroster()
+    {
+        return $this->hasMany('App\TeamRoster');
+    }
+
+
+
+
 
 }

@@ -33,19 +33,17 @@ class CreateTeamsTable extends Migration
             $table->increments('league_id');
             $table->string('name');
             $table->string('type');
-            $table->tinyInteger('active');
+            $table->boolean('active');
             $table->timestamps();
         });
 
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('team_id');
             $table->unsignedInteger('league_id');
-            $table->unsignedInteger('player_id');
             $table->string('team_name');
             $table->timestamps();      
 
-            $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('player_id')->references( 'player_id' )->on( 'players' )->onDelete('cascade')->onUpdate('cascade');          
+            $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');         
 
         });
 
@@ -53,7 +51,8 @@ class CreateTeamsTable extends Migration
             $table->increments('team_roster_id');
             $table->unsignedInteger('team_id');
             $table->unsignedInteger('player_id');
-            $table->tinyInteger('active');
+            $table->boolean('active');
+            $table->boolean('captain');
             $table->timestamps();
 
             $table->foreign('team_id')->references( 'team_id' )->on( 'teams' )->onDelete('cascade')->onUpdate('cascade');
@@ -67,7 +66,9 @@ class CreateTeamsTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->smallInteger('zip');
-            $table->tinyInteger('active');
+            $table->boolean('alcohol_allowed');
+            $table->boolean('night_games');
+            $table->boolean('active');
             $table->timestamps();
         });
 
@@ -109,14 +110,14 @@ class CreateTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('umpires');
-        Schema::drop('rules');
-        Schema::drop('games');
-        Schema::drop('fields');
-        Schema::drop('teams_roster');
-        Schema::drop('teams');
-        Schema::drop('players');
-        Schema::drop('leagues');
+        Schema::dropIfExists('umpires');
+        Schema::dropIfExists('rules');
+        Schema::dropIfExists('games');
+        Schema::dropIfExists('fields');
+        Schema::dropIfExists('teams_roster');
+        Schema::dropIfExists('teams');
+        Schema::dropIfExists('players');
+        Schema::dropIfExists('leagues');
       
     }
 }

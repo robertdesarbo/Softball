@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('content')
 	<h1>Edit: {!! $players->first_name !!} </h1>

@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
 
-    <title>Laravel</title>
+		<meta charset="UTF-8">
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+		<title>@yield('pageName')</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+		<link rel="stylesheet" href="{{ elixir('css/styles.css') }}">
+		
+	</head>
 
-</head>
-<body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
+	<body>
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+	    <nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <a class="navbar-brand" href="/">Lynn's Softball League</a>
+	        </div>
+	            <!-- Right Side Of Navbar -->
+	            <ul class="nav navbar-nav navbar-right">
+	                <!-- Authentication Links -->
+	                @if (Auth::guest())
+	                    <li><a href="{{ url('/login') }}">Login</a></li>
+	                    <li><a href="{{ url('/register') }}">Register</a></li>
+	                @else
+	                    <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	                            {{ Auth::user()->name }} <span class="caret"></span>
+	                        </a>
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
-                </a>
-            </div>
+	                        <ul class="dropdown-menu" role="menu">
+	                        	<li><a href="{{ url('/setting') }}"><i class="fa fa-cog"></i> Settings</a></li>
+	                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
+	                        </ul>
+	                    </li>
+	                @endif
+	            </ul>
+	      </div>
+	    </nav>
+				
+	    <div class="container main-content">
+	      <div class="row row-offcanvas row-offcanvas-left">
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+	        <!-- sidebar -->
+	        @if (Auth::check())
+		        <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 sidebar-offcanvas " role="navigation">
+		            <ul class="nav">
+		            		<!-- Admin -->
+		            		@if( Auth::user()->type == 0 )
+			            	  <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
+				              <li><a href="{{ url('/schedule') }}"><i class="fa fa-list"></i> Schedule</a></li>
+				              <li><a href="{{ url('/players') }}"><i class="fa fa-user"></i> Players</a></li>
+				              <li><a href="{{ url('/teams') }}"><i class="fa fa-users"></i> Teams</a></li>
+				              <li><a href="{{ url('/standings') }}"><i class="fa fa-bar-chart"></i> Standing</a></li>
+				              <li><a href="{{ url('/leagues') }}"><i class="fa fa-trophy"></i> Leagues</a></li>
+				              <li><a href="{{ url('/fields') }}"><i class="fa fa-map-marker"></i> Fields</a></li>
+				              <li><a href="{{ url('/umpires') }}"><i class="fa fa-gavel"></i> Umpires</a></li>    
+		            		@elseif( Auth::user()->type == 1 || Auth::user()->type == 2 )
+			            	  <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
+				              <li><a href="{{ url('/teams') }}"><i class="fa fa-users"></i> Teams</a></li>
+				              <li><a href="{{ url('/standings') }}"><i class="fa fa-bar-chart"></i> Standing</a></li>
+				              <li><a href="{{ url('/fields') }}"><i class="fa fa-map-marker"></i> Fields</a></li>
+				              <li><a href="{{ url('/umpires') }}"><i class="fa fa-gavel"></i> Umpires</a></li>  
+		            		@endif
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </div>
-    </nav>
+		            </ul>
+		        </div>
+			@endif 
 
-    @yield('content')
+			<div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 container">
+				@yield('content')
+			</div>
+	      </div><!--/.row-->
+	    </div><!--/.container-->
 
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-</body>
+		
+		@yield('footer')
+
+		<script src="{{ elixir('js/frontend.js') }}"></script>
+	</body>
+
 </html>

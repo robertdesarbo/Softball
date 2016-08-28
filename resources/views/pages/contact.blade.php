@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('content')
 
@@ -7,7 +7,7 @@
 @stop
 
 <h1>
-		Contact Me!
+	Contact Me!
 </h1>
 
 @yield('footer')

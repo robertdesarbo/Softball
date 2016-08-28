@@ -43,19 +43,20 @@
 	      <div class="row row-offcanvas row-offcanvas-left">
 
 	        <!-- sidebar -->
-	        <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 sidebar-offcanvas " role="navigation">
-	            <ul class="nav">
-	            	@if (Auth::check())
-	            	  <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
-		              <li><a href="{{ url('/schedule') }}"><i class="fa fa-list"></i> Schedule</a></li>
-		              <li><a href="{{ url('/players') }}"><i class="fa fa-user"></i> Players</a></li>
-		              <li><a href="{{ url('/teams') }}"><i class="fa fa-users"></i> Teams</a></li>
-		              <li><a href="{{ url('/leagues') }}"><i class="fa fa-trophy"></i> Leagues</a></li>
-		              <li><a href="{{ url('/fields') }}"><i class="fa fa-map-marker"></i> Fields</a></li>
-		              <li><a href="{{ url('/umpires') }}"><i class="fa fa-gavel"></i> Umpires</a></li>  
-		            @endif   
-	            </ul>
-	        </div>
+	        @if (Auth::check())
+		        <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 sidebar-offcanvas " role="navigation">
+		            <ul class="nav">
+		            	  <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
+			              <li><a href="{{ url('/schedule') }}"><i class="fa fa-list"></i> Schedule</a></li>
+			              <li><a href="{{ url('/players') }}"><i class="fa fa-user"></i> Players</a></li>
+			              <li><a href="{{ url('/teams') }}"><i class="fa fa-users"></i> Teams</a></li>
+			              <li><a href="{{ url('/leagues') }}"><i class="fa fa-trophy"></i> Leagues</a></li>
+			              <li><a href="{{ url('/fields') }}"><i class="fa fa-map-marker"></i> Fields</a></li>
+			              <li><a href="{{ url('/umpires') }}"><i class="fa fa-gavel"></i> Umpires</a></li>  
+			              
+		            </ul>
+		        </div>
+			@endif 
 
 			<div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 container">
 				@yield('content')

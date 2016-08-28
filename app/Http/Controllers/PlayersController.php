@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Player;
 
 use Request;
+use Auth;
 
 use App\Http\Requests;
 use App\Http\Requests\PlayerRequest;
@@ -16,7 +17,7 @@ class PlayersController  extends Controller
 	public function index() 
 	{
 		$players = null;
-
+		
 		return view( 'players.search', compact( 'players' ) );
 	}
 

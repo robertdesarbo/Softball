@@ -17,8 +17,12 @@ Route::resource( 'leagues', 'LeaguesController' );
 
 Route::resource( 'teams', 'TeamsController' );
 
+Route::get( 'teams/find', 'TeamsController@index' )->name( 'teams.find.index' );
+
 Route::resource( 'players', 'PlayersController' );
 Route::post( 'players', 'PlayersController@search' );
+
+Route::resource( 'standings', 'StandingsController' );
 
 Route::resource( 'umpires', 'UmpiresController' );
 
