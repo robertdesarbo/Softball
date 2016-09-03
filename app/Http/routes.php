@@ -19,8 +19,8 @@ Route::resource( 'teams', 'TeamsController' );
 
 Route::get( 'teams/find', 'TeamsController@index' )->name( 'teams.find.index' );
 
-Route::resource( 'players', 'PlayersController' );
-Route::post( 'players', 'PlayersController@search' );
+Route::resource( 'users', 'UsersController' );
+Route::post( 'users', 'UsersController@search' );
 
 Route::resource( 'standings', 'StandingsController' );
 

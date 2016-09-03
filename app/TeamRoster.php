@@ -20,9 +20,9 @@ class TeamRoster extends Model
         return $this->belongsTo('App\Team');
     }
 
-    public function player()
+    public function user()
     {
-        return $this->belongsTo('App\Player');
+        return $this->belongsTo('App\User');
     }
 
 

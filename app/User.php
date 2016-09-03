@@ -26,10 +26,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function player()
+    public function setDateOfBirthAtrribute($date)
     {
-        return $this->hasOne('App\Player');
+        $this->attributes[ 'date_of_birth' ] = Carbon::parse( $date );
     }
 
+    public function teamroster()
+    {
+        return $this->hasMany('App\TeamRoster');
+    }
 
 }

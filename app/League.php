@@ -18,4 +18,9 @@ class League extends Model
     {
         return $this->hasMany('App\Team');
     }
+
+    public function rule()
+    {
+        return $this->hasMany('App\Rule');
+    }
 }

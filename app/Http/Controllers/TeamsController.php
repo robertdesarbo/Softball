@@ -13,7 +13,7 @@ class TeamsController extends Controller
 {
     public function index() 
 	{
-		$teams = $this->getTeamsPlayerIsOn( );
+		$teams = $this->getTeamsUserIsOn( );
 
 		return view( 'teams.index', compact( 'teams' ) );
 	}
@@ -25,16 +25,12 @@ class TeamsController extends Controller
 		return view( 'teams.index', compact( 'teams' ) );
 	}
 
-	public function getTeamsPlayerIsOn( )
+	public function getTeamsUserIsOn( )
 	{
-		$teams = Auth::user()->player->teamroster->where( 'active', '1' );
+		$teams = Auth::user()->teamroster->where( 'active', '1' );
 
 		return $teams;
 	}
 
 
 }
-
-#TeamRoster -> Player -> User
-
-#Team -> Player -> User

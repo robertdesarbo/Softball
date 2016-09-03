@@ -16,16 +16,35 @@ class Team extends Model
 
     public static function getTeamCaptain( $team_id )
     {
-        $teamCaptain = TeamRoster::
-            where( 'team_id', $team_id )->
-            where( 'captain', '1' )->first()->player;
+        $teamCaptain = TeamRoster::where( 'team_id', $team_id )
+            ->where( 'captain', '1' )->first( );
 
-        return $teamCaptain->first_name." ".$teamCaptain->last_name;
+        if( is_null( $teamCaptain ) )
+        {
+            $teamCaptain = "No Captain";
+        }
+        else
+        {
+            $teamCaptain = $teamCaptain->user;
+            $teamCaptain = $teamCaptain->first_name." ".$teamCaptain->last_name;
+        }
+
+        return $teamCaptain ;
+    }
+
+    public function league()
+    {
+        return $this->belongsTo('App\League');
     }
 
     public function teamroster()
     {
         return $this->hasMany('App\TeamRoster');
+    }
+
+    public function game()
+    {
+        return $this->hasMany('App\Game');
     }
 
 
