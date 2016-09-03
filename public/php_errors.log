@@ -2,3 +2,19 @@
 [14-Aug-2016 03:30:57 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /var/www/html/softball/app/Http/Controllers/PlayersController.php on line 8
 [14-Aug-2016 17:04:37 UTC] PHP Fatal error:  Cannot use App\Http\Requests as Requests because the name is already in use in /var/www/html/softball/app/Http/Controllers/PlayersController.php on line 8
 [28-Aug-2016 15:58:54 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 9
+[03-Sep-2016 22:05:36 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\Teams' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 12
+[03-Sep-2016 22:07:09 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\Teams' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 12
+[03-Sep-2016 22:08:56 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\PrintReport' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:16:36 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:17:17 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:17:26 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:17:41 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsTrait' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:18:13 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:19:23 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:20:54 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/StandingsController.php on line 13
+[03-Sep-2016 22:20:56 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 14
+[03-Sep-2016 22:21:33 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 14
+[03-Sep-2016 22:21:47 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 14
+[03-Sep-2016 22:22:02 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\App\TeamsPlayerIsOn' not found in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 14
+[03-Sep-2016 22:22:31 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOnTrait' not found in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 14
+[03-Sep-2016 22:22:34 UTC] PHP Fatal error:  Trait 'App\Http\Controllers\TeamsPlayerIsOnTrait' not found in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 14

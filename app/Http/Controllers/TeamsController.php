@@ -11,6 +11,8 @@ use App\Http\Requests;
 
 class TeamsController extends Controller
 {
+	use TeamsPlayerIsOnTrait;
+
     public function index() 
 	{
 		$teams = $this->getTeamsUserIsOn( );
@@ -24,23 +26,5 @@ class TeamsController extends Controller
 		
 		return view( 'teams.index', compact( 'teams' ) );
 	}
-
-	public function getTeamsUserIsOn( )
-	{
-		$teams = Auth::user()
-					->teamroster()
-					->where( 'active', '1' )
-					->with( array( 'team' => function($query)
-						{
-			     			$query->with( array( 'division' => function($query)
-							{
-				     			$query->with( 'league' );
-							}));
-						}))
-					->get();
-
-		return $teams;
-	}
-
 
 }

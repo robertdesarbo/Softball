@@ -86,6 +86,8 @@ class CreateTeamsTable extends Migration
             $table->increments('game_id');
             $table->unsignedInteger('home_team_id');
             $table->unsignedInteger('away_team_id');
+            $table->unsignedInteger('home_team_score');
+            $table->unsignedInteger('away_team_score');
             $table->unsignedInteger('field_id');
             $table->unsignedInteger('umpire_id');
             $table->dateTimeTz('game_time');
