@@ -31,9 +31,11 @@ class User extends Authenticatable
         $this->attributes[ 'date_of_birth' ] = Carbon::parse( $date );
     }
 
-    public function teamroster()
+    public function teamRoster()
     {
         return $this->hasMany('App\TeamRoster');
     }
+
+
 
 }

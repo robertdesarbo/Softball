@@ -14,9 +14,9 @@ class League extends Model
         'active',
     ];
 
-    public function team()
+    public function division()
     {
-        return $this->hasMany('App\Team');
+        return $this->hasMany('App\Division');
     }
 
     public function rule()

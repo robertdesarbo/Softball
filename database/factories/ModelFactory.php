@@ -37,6 +37,13 @@ $factory->define(App\League::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Division::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->text($maxNbChars = 15),
+        'active' => $faker->boolean,
+    ];
+});
+
 
 $factory->define(App\Team::class, function (Faker\Generator $faker) {
     return [
@@ -55,7 +62,7 @@ $factory->define(App\TeamRoster::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Field::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->boolean,
+        'name' => $faker->company,
         'address' => $faker->streetAddress,
         'city' => $faker->city,
         'state' => $faker->state,

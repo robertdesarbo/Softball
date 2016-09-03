@@ -57,7 +57,7 @@
 				              <li><a href="{{ url('/leagues') }}"><i class="fa fa-trophy"></i> Leagues</a></li>
 				              <li><a href="{{ url('/fields') }}"><i class="fa fa-map-marker"></i> Fields</a></li>
 				              <li><a href="{{ url('/umpires') }}"><i class="fa fa-gavel"></i> Umpires</a></li>    
-		            		@elseif( Auth::user()->type == 1 || Auth::user()->type == 2 )
+		            		@elseif( Auth::user()->type == 1 )
 			            	  <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
 				              <li><a href="{{ url('/teams') }}"><i class="fa fa-users"></i> Teams</a></li>
 				              <li><a href="{{ url('/standings') }}"><i class="fa fa-bar-chart"></i> Standing</a></li>

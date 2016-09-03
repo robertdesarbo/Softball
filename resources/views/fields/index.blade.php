@@ -7,8 +7,8 @@
 
 		<table class="table">
 			<thead>
-				<th>Field Name</th>
-				<th>Field Location</th>
+				<th>Name</th>
+				<th>Location</th>
 				<th>Alcohol Allowed</th>
 				<th>Google Maps</th>
 			</thead>
@@ -19,11 +19,11 @@
 						<td>{{ $field->name }}</td>
 						<td>{{ $field->address.' '.$field->city.' '.$field->state.' '.$field->zip  }}</td>
 						@if( $field->alcohol_allowed == 1 )
-							<td><i class="fa fa-check" aria-hidden="true"></i></td>
+							<td style='text-align: center;'><i class="fa fa-check" aria-hidden="true"></i></td>
 						@else
 							<td></td>
 						@endif
-						<td><i class="fa fa-map-marker" aria-hidden="true"></i></td>		
+						<td style='text-align: center;'><i class="fa fa-map-marker" aria-hidden="true"></i></td>		
 					</tr>
 
 				@endforeach

@@ -19,11 +19,7 @@ class Team extends Model
         $teamCaptain = TeamRoster::where( 'team_id', $team_id )
             ->where( 'captain', '1' )->first( );
 
-        if( is_null( $teamCaptain ) )
-        {
-            $teamCaptain = "No Captain";
-        }
-        else
+        if( !is_null( $teamCaptain ) )
         {
             $teamCaptain = $teamCaptain->user;
             $teamCaptain = $teamCaptain->first_name." ".$teamCaptain->last_name;
@@ -32,9 +28,9 @@ class Team extends Model
         return $teamCaptain ;
     }
 
-    public function league()
+    public function division()
     {
-        return $this->belongsTo('App\League');
+        return $this->belongsTo('App\Division');
     }
 
     public function teamroster()

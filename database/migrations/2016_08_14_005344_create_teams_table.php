@@ -21,13 +21,23 @@ class CreateTeamsTable extends Migration
             $table->timestamps();
         });
 
+        Schema::create('divisions', function (Blueprint $table) {
+            $table->increments('division_id');
+            $table->unsignedInteger('league_id');
+            $table->string('name');
+            $table->boolean('active');
+            $table->timestamps();
+
+            $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade'); 
+        });
+
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('team_id');
-            $table->unsignedInteger('league_id');
+            $table->unsignedInteger('division_id');
             $table->string('team_name');
             $table->timestamps();      
 
-            $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade');         
+            $table->foreign('division_id')->references( 'division_id' )->on( 'divisions' )->onDelete('cascade')->onUpdate('cascade');         
 
         });
 
@@ -102,6 +112,7 @@ class CreateTeamsTable extends Migration
         Schema::dropIfExists('fields');
         Schema::dropIfExists('teams_roster');
         Schema::dropIfExists('teams');
+        Schema::dropIfExists('divisions');
         Schema::dropIfExists('leagues');
         Schema::dropIfExists('umpires');
       

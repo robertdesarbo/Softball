@@ -27,7 +27,17 @@ class TeamsController extends Controller
 
 	public function getTeamsUserIsOn( )
 	{
-		$teams = Auth::user()->teamroster->where( 'active', '1' );
+		$teams = Auth::user()
+					->teamroster()
+					->where( 'active', '1' )
+					->with( array( 'team' => function($query)
+						{
+			     			$query->with( array( 'division' => function($query)
+							{
+				     			$query->with( 'league' );
+							}));
+						}))
+					->get();
 
 		return $teams;
 	}

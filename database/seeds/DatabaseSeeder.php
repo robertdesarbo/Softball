@@ -46,11 +46,21 @@ class DatabaseSeeder extends Seeder
 	        ]);
         }
 
+        #Divisions
+        foreach (range(1,10) as $index)
+        {
+        	factory(App\Division::class, 25)->create( [ 
+	       		'league_id' => $leagueIDs[ array_rand( $leagueIDs, 1 ) ]
+	        ]);
+        }
+
+        $divisonIDs 	= DB::table('divisions')->pluck('division_id');
+
         #Teams
         foreach (range(1,10) as $index)
         {
         	factory(App\Team::class, 25)->create( [ 
-	       		'league_id' => $leagueIDs[ array_rand( $leagueIDs, 1 ) ]
+	       		'division_id' => $divisonIDs[ array_rand( $divisonIDs, 1 ) ]
 	        ]);
         }
 
