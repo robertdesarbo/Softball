@@ -16,7 +16,7 @@
 				@foreach ($teams as $team)
 
 					<tr>
-						<td>{{ $team->team->team_name }}</td>
+						<td>{{ $team->team->name }}</td>
 
 						@if( $team->captain == 1 )
 							<td class="text-success"><strong>You</strong></td>
@@ -28,8 +28,8 @@
 							@endif
 						@endif
 						
-						<td>{{ $team->team->division->name }}</td>
-						<td>{{ $team->team->division->league->name }}</td>
+						<td>{{ $team->team->session->division->name }}</td>
+						<td>{{ $team->team->session->division->league->name }}</td>
 
 					</tr>
 				@endforeach

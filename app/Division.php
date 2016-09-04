@@ -18,9 +18,9 @@ class Division extends Model
         return $this->belongsTo('App\League');
     }
 
-    public function team()
+    public function session()
     {
-        return $this->hasMany('App\Team');
+        return $this->hasMany('App\Session');
     }
 
 }

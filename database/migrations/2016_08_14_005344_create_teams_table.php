@@ -31,13 +31,24 @@ class CreateTeamsTable extends Migration
             $table->foreign('league_id')->references( 'league_id' )->on( 'leagues' )->onDelete('cascade')->onUpdate('cascade'); 
         });
 
+        Schema::create('sessions', function (Blueprint $table) {
+            $table->increments('session_id');
+            $table->unsignedInteger('division_id');
+            $table->dateTimeTz('start_date');
+            $table->dateTimeTz('end_date');
+            $table->boolean('active');
+            $table->timestamps();
+
+            $table->foreign('division_id')->references( 'division_id' )->on( 'divisions' )->onDelete('cascade')->onUpdate('cascade'); 
+        });
+
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('team_id');
-            $table->unsignedInteger('division_id');
-            $table->string('team_name');
+            $table->unsignedInteger('session_id');
+            $table->string('name');
             $table->timestamps();      
 
-            $table->foreign('division_id')->references( 'division_id' )->on( 'divisions' )->onDelete('cascade')->onUpdate('cascade');         
+            $table->foreign('session_id')->references( 'session_id' )->on( 'sessions' )->onDelete('cascade')->onUpdate('cascade');         
 
         });
 
@@ -84,15 +95,19 @@ class CreateTeamsTable extends Migration
 
         Schema::create('games', function (Blueprint $table) {
             $table->increments('game_id');
+            $table->unsignedInteger('session_id');
             $table->unsignedInteger('home_team_id');
             $table->unsignedInteger('away_team_id');
-            $table->unsignedInteger('home_team_score');
-            $table->unsignedInteger('away_team_score');
             $table->unsignedInteger('field_id');
             $table->unsignedInteger('umpire_id');
+            $table->unsignedInteger('home_team_score');
+            $table->unsignedInteger('away_team_score');
+            
             $table->dateTimeTz('game_time');
+            $table->dateTimeTz('score_recored_time')->nullable();
             $table->timestamps();
 
+            $table->foreign('session_id')->references( 'session_id' )->on( 'sessions' )->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('home_team_id')->references( 'team_id' )->on( 'teams' )->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('away_team_id')->references( 'team_id' )->on( 'teams' )->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('field_id')->references( 'field_id' )->on( 'fields' )->onDelete('cascade')->onUpdate('cascade');
@@ -114,6 +129,7 @@ class CreateTeamsTable extends Migration
         Schema::dropIfExists('fields');
         Schema::dropIfExists('teams_roster');
         Schema::dropIfExists('teams');
+        Schema::dropIfExists('sessions');
         Schema::dropIfExists('divisions');
         Schema::dropIfExists('leagues');
         Schema::dropIfExists('umpires');

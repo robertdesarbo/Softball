@@ -13,6 +13,11 @@ class Game extends Model
     ];
 
 
+    public function session()
+    {
+        return $this->belongsTo('App\Session');
+    }
+
     public function field()
     {
         return $this->belongsTo('App\Field');

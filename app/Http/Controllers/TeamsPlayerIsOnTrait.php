@@ -14,9 +14,12 @@ trait TeamsPlayerIsOnTrait
 					->where( 'active', '1' )
 					->with( array( 'team' => function($query)
 						{
-			     			$query->with( array( 'division' => function($query)
+							$query->with( array( 'session' => function($query)
 							{
-				     			$query->with( 'league' );
+				     			$query->with( array( 'division' => function($query)
+								{
+					     			$query->with( 'league' );
+								}));
 							}));
 						}))
 					->get();

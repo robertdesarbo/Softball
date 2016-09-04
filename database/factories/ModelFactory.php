@@ -33,28 +33,43 @@ $factory->define(App\League::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->text($maxNbChars = 15),
         'type' => $faker->word,
-        'active' => $faker->boolean,
+        #'active' => $faker->boolean,
+        'active' => 1,
     ];
 });
+
 
 $factory->define(App\Division::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->text($maxNbChars = 15),
-        'active' => $faker->boolean,
+        #'active' => $faker->boolean,
+        'active' => 1,
+    ];
+});
+
+
+$factory->define(App\Session::class, function (Faker\Generator $faker) {
+    return [
+        'start_date' => $faker->dateTimeBetween('now', '+1 months'),
+        'end_date' => $faker->dateTimeBetween('+1 months', '+6 months'),
+        #'active' => $faker->boolean,
+        'active' => 1,
+
     ];
 });
 
 
 $factory->define(App\Team::class, function (Faker\Generator $faker) {
     return [
-        'team_name' => $faker->text($maxNbChars = 15),
+        'name' => $faker->text($maxNbChars = 15),
     ];
 });
 
 
 $factory->define(App\TeamRoster::class, function (Faker\Generator $faker) {
     return [
-        'active' => $faker->boolean,
+    	#'active' => $faker->boolean,
+        'active' => 1,
         'captain' => $faker->boolean,
     ];
 });
@@ -69,7 +84,8 @@ $factory->define(App\Field::class, function (Faker\Generator $faker) {
         'zip' => $faker->postcode,
         'alcohol_allowed' => $faker->boolean,
         'night_games' => $faker->boolean,
-        'active' => $faker->boolean,
+        #'active' => $faker->boolean,
+        'active' => 1,
     ];
 });
 
@@ -91,6 +107,6 @@ $factory->define(App\Rule::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Game::class, function (Faker\Generator $faker) {
     return [
-        'game_time' => $faker->dateTimeBetween('now', '+3 months'),
+        'game_time' => $faker->dateTimeBetween('-1 month', '+3 months'),
     ];
 });

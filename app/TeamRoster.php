@@ -12,7 +12,7 @@ class TeamRoster extends Model
 	protected $primaryKey   = 'team_roster_id';
 
     protected $fillable = [
-        'active',
+        'active', 'captain',
     ];
 
     public function team()
@@ -22,7 +22,7 @@ class TeamRoster extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'user_id' );
     }
 
 

@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
@@ -10,7 +9,7 @@ class Team extends Model
 	protected $primaryKey = 'team_id';
 
     protected $fillable = [
-        'team_name',
+        'name',
     ];
 
 
@@ -28,9 +27,9 @@ class Team extends Model
         return $teamCaptain ;
     }
 
-    public function division()
+    public function session()
     {
-        return $this->belongsTo('App\Division');
+        return $this->belongsTo('App\Session');
     }
 
     public function teamroster()

@@ -5,34 +5,48 @@
 
 	@if( count( $standings ) > 0 )
 
-		<table class="table">
-			<thead>
-				<th>Place</th>
+		@foreach ($standings as $session)
+
+			<h3>{{ $session[ 'division_name' ] . " (" . $session[ 'start_date' ] . ")" }}</h3>
+
+			<table class="table">
+				<thead>
+					<th>Place</th>
 				<th>Team</th>
-				<th>Wins</th>
-				<th>Loses</th>
-				<th>Games Behind</th>
-			</thead>
-			<tbody>
-				@foreach ($standings as $position)
+					<th style='text-align: center;'>Wins</th>
+					<th style='text-align: center;'>Loses</th>
+					<th style='text-align: center;'>Ties</th>
+					<th style='text-align: center;'>Games Played</th>
+				</thead>
+				<tbody>
+					
+						@foreach ( $session[ 'teams' ] as $pos => $team )
 
-					<tr>
-						<td>{{ $position->position }}</td>
-						<td>{{ $position->team_name }}</td>
-						<td>{{ $position->wins }}</td>
-						<td>{{ $position->loses }}</td>
-						<td>{{ $position->games_behind }}</td>
-					</tr>
+							<tr>
+								<td>{{ $pos+1 }}</td>
+								<td>{{ $team[ 'name' ] }}</td>
+								<td style='text-align: center;'>{{ $team[ 'wins' ] }}</td>
+								<td style='text-align: center;'>{{ $team[ 'loses' ] }}</td>
+								<td style='text-align: center;'>{{ $team[ 'ties' ] }}</td>
+								<td style='text-align: center;'>{{ $team[ 'games_played' ] }}</td>
+								
+							</tr>
 
-				@endforeach
-			</tbody>
+						@endforeach
 
-		</table>
+					
+				</tbody>
+
+			</table>
+
+			<br/>
+
+		@endforeach
 
 	@else
 		You do not play for any teams!
 	@endif
-	
+
 	@include( 'errors.list' )
 
 @stop	
