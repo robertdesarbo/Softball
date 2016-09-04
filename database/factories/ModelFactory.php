@@ -98,6 +98,14 @@ $factory->define(App\Umpire::class, function (Faker\Generator $faker) {
 });
 
 
+$factory->define(App\UmpireEvaluation::class, function (Faker\Generator $faker) {
+    return [
+        'rating' => $faker->numberBetween(1,5),
+        'note' => $faker->paragraph( 5 ),
+    ];
+});
+
+
 $factory->define(App\Rule::class, function (Faker\Generator $faker) {
     return [
         'rule' => $faker->sentence,

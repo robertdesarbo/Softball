@@ -84,6 +84,18 @@ class CreateTeamsTable extends Migration
             $table->timestamps();
         });
 
+        Schema::create('umpire_evaluations', function (Blueprint $table) {
+            $table->increments('umpire_evaluation_id');
+            $table->unsignedInteger('umpire_id');
+            $table->unsignedInteger('user_id');
+            $table->smallInteger('rating');
+            $table->longText('note');
+            $table->timestamps();
+
+            $table->foreign('umpire_id')->references( 'umpire_id' )->on( 'umpires' )->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('user_id')->references( 'user_id' )->on( 'users' )->onDelete('cascade')->onUpdate('cascade');
+        });
+
         Schema::create('rules', function (Blueprint $table) {
             $table->increments('rule_id');
             $table->unsignedInteger('league_id');
@@ -132,6 +144,7 @@ class CreateTeamsTable extends Migration
         Schema::dropIfExists('sessions');
         Schema::dropIfExists('divisions');
         Schema::dropIfExists('leagues');
+        Schema::dropIfExists('umpire_evaluations');
         Schema::dropIfExists('umpires');
       
     }

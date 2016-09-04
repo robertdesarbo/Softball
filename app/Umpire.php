@@ -13,4 +13,9 @@ class Umpire extends Model
         'first_name',
         'last_name',
     ];
+
+    public function umpireEvaluation()
+    {
+        return $this->hasMany('App\UmpireEvaluation');
+    }
 }

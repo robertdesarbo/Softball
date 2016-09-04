@@ -36,6 +36,9 @@ class User extends Authenticatable
         return $this->hasMany('App\TeamRoster');
     }
 
-
+    public function umpireEvaluations()
+    {
+        return $this->hasMany('App\UmpireEvaluation');
+    }
 
 }

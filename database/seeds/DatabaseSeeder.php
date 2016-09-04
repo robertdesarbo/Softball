@@ -42,6 +42,18 @@ class DatabaseSeeder extends Seeder
         $fieldIDs 	= DB::table('fields')->pluck('field_id');
         $umpireIDs  = DB::table('umpires')->pluck('umpire_id');
 
+		#Umpires Evaluation
+		foreach ( $umpireIDs as $umpire_id )
+        {
+        	foreach ( range(1,15) as $index )
+        	{
+        		factory(App\UmpireEvaluation::class)->create( [ 
+		       		'umpire_id' => $umpire_id,
+		       		'user_id' => $userIDs[ array_rand( $userIDs, 1 ) ],
+		        ]);
+        	}
+        }
+
         #Rules
         foreach (range(1,10) as $index)
         {

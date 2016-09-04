@@ -13,6 +13,7 @@
 				<th>League</th>
 			</thead>
 			<tbody>
+
 				@foreach ($teams as $team)
 
 					<tr>
