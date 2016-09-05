@@ -12,6 +12,10 @@ class Session extends Model
         'start_date', 'end_date', 'active',
     ];
 
+    protected $dates = [
+        'start_date', 'end_date',
+    ];
+
     public function division()
     {
         return $this->belongsTo('App\Division');
@@ -26,4 +30,5 @@ class Session extends Model
     {
         return $this->hasMany('App\Game');
     }
+
 }

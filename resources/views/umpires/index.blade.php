@@ -9,8 +9,8 @@
 			<thead>
 				<th>Name</th>
 				<th>Rating</th>
+				<th style='text-align:center'># Evaulations</th>
 				<th style='text-align:center'>Review</th>
-				<th style='text-align:center'>Evaulations</th>
 			</thead>
 			<tbody>
 
@@ -33,8 +33,12 @@
 							@endfor
 							
 						</td>
-						<td style='text-align:center'><i class="fa fa-edit" aria-hidden="true"></i></td>
 						<td style='text-align:center'>{{ $umpire->num_of_evaluations }} </td>
+						<td style='text-align:center'>
+							<a href="{{ route('umpires.index') }}" type="button" class="text-primary">
+								<i class="fa fa-edit fa-lg" aria-hidden="true"></i>
+							</a>
+						</td>
 					</tr>
 
 				@endforeach

@@ -32,7 +32,6 @@ class UserRequest extends Request
             'state'         => 'required|alpha',
             'zip'           => 'required|digits:5',
             'gender'        => 'required|in:M,F',
-
         ];
     }
 }

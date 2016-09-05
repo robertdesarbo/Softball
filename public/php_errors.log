@@ -23,3 +23,7 @@
 [04-Sep-2016 20:00:50 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 106971136 bytes) in /var/www/html/softball/storage/framework/views/77e1de00cbd17918d32ee6347d010ec759e75ed4.php on line 27
 [04-Sep-2016 20:06:18 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 106971136 bytes) in /var/www/html/softball/storage/framework/views/77e1de00cbd17918d32ee6347d010ec759e75ed4.php on line 28
 [04-Sep-2016 20:07:29 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 106971136 bytes) in /var/www/html/softball/storage/framework/views/77e1de00cbd17918d32ee6347d010ec759e75ed4.php on line 35
+[05-Sep-2016 15:50:27 UTC] PHP Fatal error:  Cannot use App\Http\Requests as Requests because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 10
+[05-Sep-2016 15:50:30 UTC] PHP Fatal error:  Cannot use App\Http\Requests as Requests because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 10
+[05-Sep-2016 15:50:48 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 7
+[05-Sep-2016 15:51:02 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 7

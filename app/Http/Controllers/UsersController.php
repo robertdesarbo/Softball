@@ -100,7 +100,7 @@ class UsersController extends Controller
 trait PrintReport {
 	public function getTeamsUserIsOn( )
 	{
-		$teams = Auth::user()
+		$teamRoster = Auth::user()
 					->teamroster()
 					->where( 'active', '1' )
 					->with( array( 'team' => function($query)
@@ -112,7 +112,7 @@ trait PrintReport {
 						}))
 					->get();
 
-		return $teams;
+		return $teamRoster;
 	}}
 
 

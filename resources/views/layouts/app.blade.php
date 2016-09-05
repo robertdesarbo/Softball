@@ -7,7 +7,8 @@
 		<title>@yield('pageName')</title>
 
 		<link rel="stylesheet" href="{{ elixir('css/styles.css') }}">
-		
+		<script src="{{ elixir('js/frontend.js') }}"></script>
+
 	</head>
 
 	<body>
@@ -60,6 +61,7 @@
 		            		@elseif( Auth::user()->type == 1 )
 			            	  <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
 				              <li><a href="{{ url('/teams') }}"><i class="fa fa-users"></i> Teams</a></li>
+				              <li><a href="{{ url('/schedule') }}"><i class="fa fa-list"></i> Schedule</a></li>
 				              <li><a href="{{ url('/standings') }}"><i class="fa fa-bar-chart"></i> Standing</a></li>
 				              <li><a href="{{ url('/fields') }}"><i class="fa fa-map-marker"></i> Fields</a></li>
 				              <li><a href="{{ url('/umpires') }}"><i class="fa fa-gavel"></i> Umpires</a></li>  
@@ -78,7 +80,6 @@
 		
 		@yield('footer')
 
-		<script src="{{ elixir('js/frontend.js') }}"></script>
 	</body>
 
 </html>

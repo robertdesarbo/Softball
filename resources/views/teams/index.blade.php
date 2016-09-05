@@ -33,7 +33,9 @@
 						<td>{{ $team->team->session->division->league->name }}</td>
 
 					</tr>
+					
 				@endforeach
+
 			</tbody>
 
 		</table>
@@ -44,9 +46,9 @@
 	
 	<br/>
 
-	<a href="{{ route('teams.find.index') }}" type="button" class="btn btn-default">Create a Team</a>
+	<a href="{{ route('teams.list_team') }}" type="button" class="btn btn-default">Join a Team</a>
 
-	<a href="{{ route('teams.find.index') }}" type="button" class="btn btn-default">Join a Team</a>
+	<a href="{{ route('teams.create_team') }}" type="button" class="btn btn-default pull-right">Create a Team</a>
 
 	@include( 'errors.list' )
 
