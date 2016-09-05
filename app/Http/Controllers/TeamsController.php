@@ -40,6 +40,31 @@ class TeamsController extends Controller
 		return view( 'teams.create', compact( 'leagues' ) );
 	}
 
+	public function joinTeam( $team_id ) 
+	{
+		#Add Player to the Roster
+		$teamRoster 			= new TeamRoster;
+
+		$teamRoster->team_id 	= $team_id;
+		$teamRoster->user_id 	= Auth::user()->user_id;
+		$teamRoster->active 	= 1;
+		$teamRoster->captain 	= 0;
+
+		$teamRoster->save();
+
+		return redirect('teams');
+	}
+
+	public function removeTeam( $teamroster_id ) 
+	{
+		#Remove Player from the Roster
+		$teamRoster 			= TeamRoster::find( $teamroster_id );
+		$teamRoster->delete();
+
+		return redirect('teams');
+	}
+
+
 	public function listTeams_index( ) 
 	{
 		$teams = null;

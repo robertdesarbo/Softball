@@ -19,6 +19,8 @@ Route::resource( 'schedule', 'ScheduleController' );
 
 Route::get( 'teams/list_team', 'TeamsController@listTeams_index' )->name( 'teams.list_team' );
 Route::post( 'teams/list_team', 'TeamsController@listTeams' )->name( 'teams.list_team' );
+Route::get( 'teams/join/{team_id}', 'TeamsController@joinTeam' )->name( 'teams.join' );
+Route::get( 'teams/remove/{team_id}', 'TeamsController@removeTeam' )->name( 'teams.remove' );
 
 Route::get( 'teams/create_team', 'TeamsController@createTeams' )->name( 'teams.create_team' );
 
@@ -32,7 +34,6 @@ Route::resource( 'standings', 'StandingsController' );
 Route::resource( 'umpires', 'UmpiresController' );
 
 Route::resource( 'fields', 'FieldsController' );
-
 
 #AJAX
 Route::get( '/ajax-divisions_in_league/{league_id}', function( $league_id )

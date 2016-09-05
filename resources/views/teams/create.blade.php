@@ -6,22 +6,22 @@
 	{!! Form::open( ['url' => 'teams' ]) !!}
 
 	    <div class="form-group">
-	        {{ Form::label('title', 'Team Name') }}
+	        {{ Form::label('name', 'Team Name') }}
 	        {{ Form::text('name', null, ['class' => 'form-control']) }}
 	    </div>
 
 	    <div class="form-group">
-	        {{ Form::label('title', 'League') }}
+	        {{ Form::label('league_id', 'League') }}
 	        {{ Form::select('league_id', $leagues, null, ['id' => 'league_id', 'class' => 'form-control']) }}
 	    </div>
 
 	    <div class="form-group">
-	        {{ Form::label('title', 'Division') }}
+	        {{ Form::label('division_id', 'Division') }}
 	        {{ Form::select('division_id', array( "" => "Choose One" ), null, ['id' => 'division_id', 'class' => 'form-control']) }}
 	    </div>
 
 	   	<div class="form-group">
-	        {{ Form::label('title', 'Session') }}
+	        {{ Form::label('session_id', 'Session') }}
 	        {{ Form::select('session_id', array( "" => "Choose One" ), null, ['id' => 'session_id', 'class' => 'form-control']) }}
 	    </div>
 

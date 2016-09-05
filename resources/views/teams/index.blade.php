@@ -11,6 +11,7 @@
 				<th>Captain</th>
 				<th>Division</th>
 				<th>League</th>
+				<th></th>
 			</thead>
 			<tbody>
 
@@ -31,9 +32,14 @@
 						
 						<td>{{ $team->team->session->division->name }}</td>
 						<td>{{ $team->team->session->division->league->name }}</td>
+						<td>
+							<a href="{{ route('teams.remove', [ $team->team_roster_id ]) }}" type="button" class="text-danger">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</a>
+						</td>
 
 					</tr>
-					
+
 				@endforeach
 
 			</tbody>

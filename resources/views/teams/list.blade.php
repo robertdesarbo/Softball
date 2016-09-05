@@ -6,7 +6,7 @@
 	{!! Form::open( ['url' => 'teams/list_team' ]) !!}
 
 	    <div class="form-group">
-	        {{ Form::label('title', 'Team Name') }}
+	        {{ Form::label('name', 'Team Name') }}
 	        {{ Form::text('name', null, ['class' => 'form-control']) }}
 	    </div>
 
@@ -30,6 +30,7 @@
 				<th>Captain</th>
 				<th>Division</th>
 				<th>League</th>
+				<th></th>
 			</thead>
 			<tbody>
 
@@ -37,7 +38,6 @@
 
 					<tr>
 						<td>{{ $team->name }}</td>
-
 
 						@if( count($team->teamroster) !== 0 && $team->teamroster[0]->user_id== Auth::user()->user_id )
 							<td class="text-success"><strong>You</strong></td>
@@ -51,7 +51,7 @@
 						
 						<td>{{ $team->session->division->name }}</td>
 						<td>{{ $team->session->division->league->name }}</td>
-
+						<td><a href="{{ route('teams.join', [ $team->team_id ]) }}" type="button" class="btn btn-default pull-right">Join</a></td>
 					</tr>
 					
 				@endforeach
