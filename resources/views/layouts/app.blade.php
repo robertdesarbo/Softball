@@ -14,7 +14,7 @@
 	<body>
 
 	    <nav class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="container">
+	      <div class="container-fluid">
 	        <div class="navbar-header">
 	          <a class="navbar-brand" href="/">Lynn's Softball League</a>
 	        </div>
@@ -40,9 +40,8 @@
 	      </div>
 	    </nav>
 				
-	    <div class="container main-content">
+	    <div class="container-fluid main-content">
 	      <div class="row row-offcanvas row-offcanvas-left">
-
 
 	        <!-- sidebar -->
 	        @if (Auth::check())
@@ -77,7 +76,6 @@
 	      </div><!--/.row-->
 	    </div><!--/.container-->
 
-		
 		@yield('footer')
 
 	</body>
