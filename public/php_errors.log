@@ -27,3 +27,4 @@
 [05-Sep-2016 15:50:30 UTC] PHP Fatal error:  Cannot use App\Http\Requests as Requests because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 10
 [05-Sep-2016 15:50:48 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 7
 [05-Sep-2016 15:51:02 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /var/www/html/softball/app/Http/Controllers/TeamsController.php on line 7
+[06-Sep-2016 00:20:27 UTC] PHP Fatal error:  Cannot use App\Http\Requests\Umpire as Umpire because the name is already in use in /var/www/html/softball/app/Http/Controllers/UmpiresController.php on line 11

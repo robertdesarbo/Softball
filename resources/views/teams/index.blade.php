@@ -32,7 +32,7 @@
 						
 						<td>{{ $team->team->session->division->name }}</td>
 						<td>{{ $team->team->session->division->league->name }}</td>
-						<td>
+						<td style='text-align: right;'>
 							<a href="{{ route('teams.remove', [ $team->team_roster_id ]) }}" type="button" class="text-danger">
 								<i class="fa fa-times" aria-hidden="true"></i>
 							</a>

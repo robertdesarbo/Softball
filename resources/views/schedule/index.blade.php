@@ -26,7 +26,7 @@
 						<td>{{ $game->home_team->name }}</td>
 						<td>{{ $game->game_time->format('M nS') }}</td>
 						<td>{{ $game->game_time->format('g:i a') }}</td>
-						<td>{{ $game->field->name  }}</td>		
+						<td>{{ $game->field->name }}</td>		
 					</tr>
 				
 				@endforeach

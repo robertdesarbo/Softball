@@ -35,7 +35,7 @@
 
 						<td style='text-align: center;'><i class="fa fa-map-marker" aria-hidden="true"></i></td>
 
-						<td>
+						<td style='text-align: right;'>
 							<form action="{{ URL::route('fields.destroy', $field->field_id ) }}" method="POST">
 							    <input type="hidden" name="_method" value="DELETE">
 							    <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -55,7 +55,7 @@
 		There are no fields listed...
 	@endif
 
-	<a href="{{ route('fields.create') }}" type="button" class="btn btn-default">Add a Field</a>
+	<a href="{{ route('fields.create') }}" type="button" class="btn btn-default">Create a Field</a>
 
 	@include( 'errors.list' )
 	

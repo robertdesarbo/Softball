@@ -15,6 +15,17 @@ Route::get( '/', 'PagesController@index' );
 
 Route::resource( 'leagues', 'LeaguesController' );
 
+Route::delete( 'divisions/{league_id}/{division_id}', 'DivisionsController@destroy' )->name( 'divisions.destroy' );
+Route::get( 'divisions/{league_id}/create', 'DivisionsController@create' )->name( 'divisions.create' );
+Route::post( 'divisions/{league_id}', 'DivisionsController@store' )->name( 'divisions.store' );
+Route::resource( 'divisions', 'DivisionsController' );
+
+Route::get( 'sessions/{league_id}/{division_id}/', 'SessionsController@show' )->name( 'sessions.show' );
+Route::delete( 'sessions/{league_id}/{division_id}/{session_id}', 'SessionsController@destroy' )->name( 'sessions.destroy' );
+Route::get( 'sessions/{league_id}/{division_id}/create', 'SessionsController@create' )->name( 'sessions.create' );
+Route::post( 'sessions/{league_id}/{division_id}/', 'SessionsController@store' )->name( 'sessions.store' );
+Route::resource( 'sessions', 'SessionsController' );
+
 Route::resource( 'schedule', 'ScheduleController' );
 
 Route::get( 'teams/list_team', 'TeamsController@listTeams_index' )->name( 'teams.list_team' );
