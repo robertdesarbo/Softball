@@ -8566,6 +8566,20 @@ button.close {
 body {
   padding-top: 51px; }
 
+.sidebar-styling {
+  background: #eaeaea;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+  overflow: hidden; }
+
+.navbar {
+  background-color: #2b3e50;
+  border-color: #2b3e50;
+  padding: 0px 10px 0px 0px; }
+
+.navbar-inverse .navbar-brand {
+  color: white; }
+
 .text-center {
   padding-top: 20px; }
 
@@ -8573,7 +8587,6 @@ body {
   background-color: #fff; }
 
 #sidebar {
-  height: 100%;
   padding-right: 0;
   padding-top: 20px; }
 
