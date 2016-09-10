@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Teams
+@stop
+
 @section('content')
 	<h2>Teams</h2>
 
@@ -14,6 +18,8 @@
 				<th></th>
 			</thead>
 			<tbody>
+
+				@include( 'errors.list' )
 
 				@foreach ($teams as $team)
 
@@ -33,11 +39,14 @@
 						<td>{{ $team->team->session->division->name }}</td>
 						<td>{{ $team->team->session->division->league->name }}</td>
 						<td style='text-align: right;'>
-							<a href="{{ route('teams.remove', [ $team->team_roster_id ]) }}" type="button" class="text-danger">
-								<i class="fa fa-times" aria-hidden="true"></i>
-							</a>
+							<form action="{{ URL::route('teams.destroy', $team->team_roster_id ) }}" method="POST">
+							    <input type="hidden" name="_method" value="DELETE">
+							    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+							    <button type="submit" class="btn btn-danger">
+									<i class="fa fa-times " aria-hidden="true"></i>
+								</button>
+							</form>
 						</td>
-
 					</tr>
 
 				@endforeach
@@ -55,7 +64,5 @@
 	<a href="{{ route('teams.list_team') }}" type="button" class="btn btn-default">Join a Team</a>
 
 	<a href="{{ route('teams.create_team') }}" type="button" class="btn btn-default pull-right">Create a Team</a>
-
-	@include( 'errors.list' )
 
 @stop	

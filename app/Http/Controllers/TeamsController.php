@@ -55,7 +55,7 @@ class TeamsController extends Controller
 		return redirect('teams');
 	}
 
-	public function removeTeam( $teamroster_id ) 
+	public function destroy( $teamroster_id ) 
 	{
 		#Remove Player from the Roster
 		$teamRoster 			= TeamRoster::find( $teamroster_id );

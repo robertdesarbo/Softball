@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Leagues
+@stop
+
 @section('content')
 	<h2>Leagues</h2>
+
+	@include( 'errors.list' )
 
 	@if( count( $leagues ) > 0 )
 
@@ -49,7 +55,5 @@
 	<br/>
 
 	<a href="{{ route('leagues.create' ) }}" type="button" class="btn btn-default">Create a League</a>
-
-	@include( 'errors.list' )
 
 @stop	

@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Sessions
+@stop
+
 @section('content')
 	<h2>{{ $division_name }}</h2>
+
+	@include( 'errors.list' )
 
 	@if( count( $sessions ) > 0 )
 
@@ -53,7 +59,5 @@
 	<a href="{{ url( '/divisions/'.$league_id ) }}" type="button" class="btn btn-default">Go Back To Division</a>
 
 	<a href="{{ url( '/sessions/'.$league_id.'/'.$division_id.'/create' ) }}" type="button" class="btn btn-default pull-right">Create a Session</a>
-
-	@include( 'errors.list' )
 
 @stop	

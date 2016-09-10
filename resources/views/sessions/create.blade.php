@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Sessions
+@stop
+
 @section('content')
-	<h1>Create Session</h1>
+	<h1>Create </h1>
 	
+	@include( 'errors.list' )
+
 	{!! Form::open( ['url' => 'sessions/'.$league_id.'/'.$division_id ]) !!}
 
 	    <div class="form-group">
@@ -34,5 +40,4 @@
 
 	{!! Form::close() !!}
 
-	@include( 'errors.list' )
 @stop

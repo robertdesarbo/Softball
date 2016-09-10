@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Standings
+@stop
+
 @section('content')
 	<h2>Standings</h2>
+	
+	@include( 'errors.list' )
 
 	@if( count( $standings ) > 0 )
 
@@ -46,7 +52,5 @@
 	@else
 		You do not play for any teams!
 	@endif
-
-	@include( 'errors.list' )
 
 @stop	

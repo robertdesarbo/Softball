@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Teams
+@stop
+
 @section('content')
 	<h2>Create Team</h2>
+
+	@include( 'errors.list' )
 
 	{!! Form::open( ['url' => 'teams' ]) !!}
 
@@ -36,11 +42,9 @@
 		</div>
 
 	{!! Form::close() !!}
-	
-	<br/>
+	@endsection
 
-	@include( 'errors.list' )
-
+	@section('scripts')
 	<script>
 		$( document ).ready(function() 
 		{
@@ -85,5 +89,5 @@
 
 		});
 	</script>
+	@endsection
 
-@endsection

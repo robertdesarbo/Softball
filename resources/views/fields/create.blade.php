@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Fields
+@stop
+
 @section('content')
 	<h1>Create Field</h1>
 	
+	@include( 'errors.list' )
+
 	{!! Form::open( ['url' => 'fields' ]) !!}
 
 	    <div class="form-group">

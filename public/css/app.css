@@ -6,19 +6,38 @@
 body {
   padding-top: 51px; }
 
+div.main-container {
+  padding: 5px 25px 5px 25px; }
+
+ul.nav > li > a {
+  font-size: 15px; }
+
+.container-fluid {
+  padding-left: 0px; }
+
 .sidebar-styling {
-  background: #eaeaea;
+  padding-top: 15px;
+  border-right: 2px solid #3a4d5f;
+  background-color: #2b3e50;
   margin-bottom: -99999px;
+  padding-right: 0px;
   padding-bottom: 99999px;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 240px; }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #606f7d; }
+
+.sidebar-styling > ul > li > a {
+  color: #d2d5da; }
 
 .navbar {
-  background-color: #2b3e50;
-  border-color: #2b3e50;
+  background-color: white;
+  border-bottom: 1px solid #3a4d5f;
   padding: 0px 10px 0px 0px; }
 
 .navbar-inverse .navbar-brand {
-  color: white; }
+  color: #2b3e50; }
 
 .text-center {
   padding-top: 20px; }

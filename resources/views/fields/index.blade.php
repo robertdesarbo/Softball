@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Fields
+@stop
+
 @section('content')
 	<h1>Fields</h1>
 	
+	@include( 'errors.list' )
+
 	@if( count( $fields ) > 0 ) 
 
 		<table class="table">
@@ -57,6 +63,4 @@
 
 	<a href="{{ route('fields.create') }}" type="button" class="btn btn-default">Create a Field</a>
 
-	@include( 'errors.list' )
-	
 @stop	

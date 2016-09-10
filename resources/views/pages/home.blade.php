@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('pageName')
-	{{ $pageName }}
+	Welcome
 @stop
 
 @section('content')
 
-	<div>
+        <div class="col-md-10">
 		<h1>Welcome</h1>
 
 		<p>

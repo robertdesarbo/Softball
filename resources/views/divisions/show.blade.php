@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Divisions
+@stop
+
 @section('content')
 	<h2>{{ $league_name  }}</h2>
+
+	@include( 'errors.list' )
 
 	@if( count( $divisions ) > 0 )
 
@@ -49,7 +55,5 @@
 	<a href="{{ url( '/leagues/' ) }}" type="button" class="btn btn-default">Go Back To Leagues</a>
 
 	<a href="{{ url( '/divisions/'.$division->league_id.'/create' ) }}" type="button" class="btn btn-default pull-right">Create a Divisions</a>
-
-	@include( 'errors.list' )
 
 @stop	

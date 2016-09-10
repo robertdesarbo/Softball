@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Teams
+@stop
+
 @section('content')
 	<h2>Join Team</h2>
+
+	@include( 'errors.list' )
 
 	{!! Form::open( ['url' => 'teams/list_team' ]) !!}
 
@@ -22,6 +28,7 @@
 
 	{!! Form::close() !!}
 	
+
 	@if( count( $teams ) > 0 )
 		
 		<table class="table">
@@ -64,9 +71,4 @@
 		We could not find any teams that match that search!
 	@endif
 	
-	<br/>
-	<br/>
-
-	@include( 'errors.list' )
-
 @endsection

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Umpires
+@stop
+
 @section('content')
 	<h1>Create Umpire</h1>
 	

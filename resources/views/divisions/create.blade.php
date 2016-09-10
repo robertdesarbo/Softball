@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
+@section('pageName')
+	Divisions
+@stop
+
 @section('content')
 	<h1>Create Division</h1>
 	
+	@include( 'errors.list' )
+
 	{!! Form::open( ['url' => 'divisions/'.$league_id ]) !!}
 
 	    <div class="form-group">
@@ -29,5 +35,4 @@
 
 	{!! Form::close() !!}
 
-	@include( 'errors.list' )
 @stop
