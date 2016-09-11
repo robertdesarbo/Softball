@@ -8,6 +8,19 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+.panel-default, .form-control {
+  border-radius: 0px;
+  -webkit-appearance: none; }
+
+.panel-body {
+  background: #f5f5f5;
+  border: 1px solid rgba(23, 23, 25, 0.3); }
+
+.panel-default > .panel-heading {
+  background-color: rgba(0, 33, 62, 0.56);
+  border: 1px solid rgba(23, 23, 25, 0.3);
+  color: white; }
+
 body {
   width: 100%;
   height: 100%;
@@ -41,7 +54,7 @@ p {
     line-height: 1.6; } }
 
 a {
-  color: #42DCA3;
+  color: #337ab7;
   transition: all 0.2s ease-in-out; }
 
 a:hover,
@@ -108,8 +121,8 @@ a:focus {
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out; }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
+    background-color: #171719;
+    border-bottom: 1px solid 1px solid rgba(23, 23, 25, 0.3); } }
 
 .intro {
   display: table;
@@ -209,16 +222,16 @@ a:focus {
   border-radius: 0; }
 
 .btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
+  border: 1px solid #337ab7;
+  color: #337ab7;
   background-color: transparent; }
 
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #42DCA3;
+  border: 1px solid #337ab7;
   outline: none;
   color: black;
-  background-color: #42DCA3; }
+  background-color: #337ab7; }
 
 ul.banner-social-buttons {
   margin-top: 0; }

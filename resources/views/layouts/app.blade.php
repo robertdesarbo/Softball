@@ -7,7 +7,7 @@
 		<title>@yield('pageName')</title>
 
 		<link rel="stylesheet" href="{{ elixir('css/styles.css') }}">
-
+		
 	</head>
 
 	<body>
