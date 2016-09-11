@@ -2,7 +2,8 @@
 
 <!-- Main Content -->
 @section('content')
-        <div class="col-md-10">
+    <div class="row main-container">
+        <div class="col-md-6 col-md-offset-3">
             <br/>
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
@@ -42,5 +43,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection

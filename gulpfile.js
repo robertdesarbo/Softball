@@ -29,7 +29,9 @@ elixir(function(mix) {
         'bower_components/jquery/dist/jquery.js',
         'bower_components/bootstrap/dist/js/bootstrap.js',
         'bower_components/Chart.js/Chart.js',
-        'bower_components/metisMenu/dist/metisMenu.js'
+        'bower_components/jquery.easing/js/jquery.easing.js',
+        'bower_components/metisMenu/dist/metisMenu.js',
+        'public/js/app.js',
     ], 'public/js/frontend.js', './');
 
     mix.version( [ 'public/css/styles.css' , 'public/js/frontend.js' ] );
