@@ -72,6 +72,7 @@ class CreateTeamsTable extends Migration
             $table->string('state');
             $table->smallInteger('zip');
             $table->boolean('alcohol_allowed');
+            $table->boolean('pets_allowed');
             $table->boolean('night_games');
             $table->boolean('active');
             $table->timestamps();

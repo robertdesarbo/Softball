@@ -100,7 +100,8 @@
 
 @section('scripts')
 	<script>
-		$( document ).ready(function() {
+		$( document ).ready(function() 
+		{
 		    // jQuery to collapse the navbar on scroll
 			function collapseNavbar() {
 			    if ($(".navbar").offset().top > 50) {

@@ -7,12 +7,12 @@
 		<title>@yield('pageName')</title>
 
 		<link rel="stylesheet" href="{{ elixir('css/styles.css') }}">
-		
+
 	</head>
 
 	<body>
 
-		@if( Route::getFacadeRoot()->current()->uri() === '/')
+		@if( Route::getFacadeRoot()->current()->uri() === '/' && Auth::guest() )
 			<nav class="navbar navbar-custom navbar-fixed-top">
 		@else
 			<nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse">

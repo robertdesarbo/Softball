@@ -5,8 +5,10 @@
 @stop
 
 @section('content')
-	<h1>Create </h1>
-	
+	<h2>Create A Session</h2>
+
+	<hr>
+
 	@include( 'errors.list' )
 
 	{!! Form::open( ['url' => 'sessions/'.$league_id.'/'.$division_id ]) !!}

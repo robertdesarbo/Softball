@@ -6,6 +6,8 @@
 
 @section('content')
 	<h2>Schedule</h2>
+
+	<hr>
 	
 	@include( 'errors.list' )
 

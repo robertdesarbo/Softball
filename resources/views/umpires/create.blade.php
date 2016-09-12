@@ -5,8 +5,12 @@
 @stop
 
 @section('content')
-	<h1>Create Umpire</h1>
+	<h2>Create Umpire</h2>
+
+	<hr>
 	
+	@include( 'errors.list' )
+
 	{!! Form::open( ['url' => 'umpires' ]) !!}
 
 	    <div class="form-group">
@@ -33,5 +37,4 @@
 
 	{!! Form::close() !!}
 
-	@include( 'errors.list' )
 @stop

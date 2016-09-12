@@ -1,0 +1,33 @@
+{
+  "name": "vertical-timeline",
+  "version": "0.0.1",
+  "homepage": "https://github.com/shinbuntu/vertical-timeline",
+  "authors": [
+    "Stéphane Monnot <monnot.stephane@gmail.com>"
+  ],
+  "main": "js/main.js",
+  "keywords": [
+    "timeline"
+  ],
+  "license": "CC BY-NC-SA 3.0",
+  "dependencies": {
+    "jquery": ">= 1.9.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "14c1ecb6c0ab74f07f2a6da62945245f4eb5442e"
+  },
+  "_source": "https://github.com/shinbuntu/vertical-timeline.git",
+  "_target": "^0.0.1",
+  "_originalSource": "vertical-timeline",
+  "_direct": true
+}

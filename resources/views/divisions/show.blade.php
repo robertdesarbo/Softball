@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-	<h2>{{ $league_name  }}</h2>
+	<h2>{{ $league_name }}</h2>
+	
+	<hr>
 
 	@include( 'errors.list' )
 

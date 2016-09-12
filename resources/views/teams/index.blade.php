@@ -7,6 +7,8 @@
 @section('content')
 	<h2>Teams</h2>
 
+	<hr>
+	
 	@if( count( $teams ) > 0 )
 
 		<table class="table">

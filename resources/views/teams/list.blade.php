@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-	<h2>Join Team</h2>
+	<h2>Join A Team</h2>
+
+	<hr>
 
 	@include( 'errors.list' )
 

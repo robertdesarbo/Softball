@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-	<h1>Umpires</h1>
+	<h2>Umpires</h2>
+
+	<hr>
 	
 	@if( count( $umpires ) > 0 ) 
 

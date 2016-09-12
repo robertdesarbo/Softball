@@ -7,6 +7,8 @@
 @section('content')
 	<h2>Leagues</h2>
 
+	<hr>
+
 	@include( 'errors.list' )
 
 	@if( count( $leagues ) > 0 )

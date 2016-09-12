@@ -24,6 +24,8 @@ elixir(function(mix) {
         'bower_components/fontawesome/css/font-awesome.css',
         'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
         'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css',
+        'bower_components/vertical-timeline/css/style.css',
+        'bower_components/vertical-timeline/css/reset.css',
         'public/css/app.css',
     ], 'public/css/styles.css', './');
 
@@ -34,6 +36,8 @@ elixir(function(mix) {
         'bower_components/jquery.easing/js/jquery.easing.js',
         'bower_components/metisMenu/dist/metisMenu.js',
         'bower_components/owl.carousel/dist/owl.carousel.min.js',
+        'bower_components/vertical-timeline/js/main.js',
+        'bower_components/vertical-timeline/js/modernizr.js',
         'public/js/app.js',
     ], 'public/js/frontend.js', './');
 

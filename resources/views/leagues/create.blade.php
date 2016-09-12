@@ -6,7 +6,9 @@
 
 
 @section('content')
-	<h1>Create League</h1>
+	<h2>Create League</h2>
+
+	<hr>
 	
 	@include( 'errors.list' )
 

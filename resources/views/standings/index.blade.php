@@ -5,7 +5,10 @@
 @stop
 
 @section('content')
+@section('content')
 	<h2>Standings</h2>
+
+	<hr>
 	
 	@include( 'errors.list' )
 

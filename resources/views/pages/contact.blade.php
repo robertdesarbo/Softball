@@ -6,9 +6,9 @@
 {{ $pageName }}
 @stop
 
-<h1>
-	Contact Me!
-</h1>
+<h2>Contact Us</h2>
+
+<hr>
 
 @yield('footer')
 

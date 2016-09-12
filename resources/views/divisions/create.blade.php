@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-	<h1>Create Division</h1>
+	<h2>Create Division</h2>
+	
+	<hr>
 	
 	@include( 'errors.list' )
 

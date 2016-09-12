@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-	<h1>Create Field</h1>
+	<h2>Create a Field</h2>
+
+	<hr>
 	
 	@include( 'errors.list' )
 
@@ -101,6 +103,12 @@
 		</div>
 
 		<div class="form-group">
+	        {{ Form::label('pets_allowed', 'Alcohol Allowed', ['class' => 'form-check-label' ] ) }}
+	        {{ Form::select('pets_allowed',array( "0" => "No", "1" => "Yes" ), null, array( 'class' => 'form-control' ) ) }}
+		</div>
+
+
+		<div class="form-group">
 	        {{ Form::label('night_games', 'Night Games', ['class' => 'form-check-label' ] ) }}
 	        {{ Form::select('night_games',array( "0" => "No", "1" => "Yes" ), null, array( 'class' => 'form-control' ) ) }}
 	    </div>
@@ -119,5 +127,4 @@
 
 	{!! Form::close() !!}
 
-	@include( 'errors.list' )
 @stop

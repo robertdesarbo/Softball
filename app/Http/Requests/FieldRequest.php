@@ -30,6 +30,7 @@ class FieldRequest extends Request
             'state'             => 'required|string',
             'zip'               => 'required|digits:5',
             'alcohol_allowed'   => 'required|boolean',
+            'pets_allowed'   => 'required|boolean',
             'night_games'       => 'required|boolean',
         ];
     }

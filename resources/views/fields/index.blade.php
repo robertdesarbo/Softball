@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-	<h1>Fields</h1>
+	<h2>Fields</h2>
+
+	<hr>
 	
 	@include( 'errors.list' )
 
@@ -16,6 +18,7 @@
 				<th>Name</th>
 				<th>Location</th>
 				<th style='text-align: center;'>Alcohol Allowed</th>
+				<th style='text-align: center;'>Pets Allowed</th>
 				<th style='text-align: center;'>Night Games</th>
 				<th style='text-align: center;'>Google Maps</th>
 				<th></th>
@@ -28,6 +31,12 @@
 						<td>{{ $field->address.' '.$field->city.' '.$field->state.' '.$field->zip  }}</td>
 
 						@if( $field->alcohol_allowed == 1 )
+							<td style='text-align: center;'><i class="fa fa-check" aria-hidden="true"></i></td>
+						@else
+							<td></td>
+						@endif
+
+						@if( $field->pets_allowed == 1 )
 							<td style='text-align: center;'><i class="fa fa-check" aria-hidden="true"></i></td>
 						@else
 							<td></td>

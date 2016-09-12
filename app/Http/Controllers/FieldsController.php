@@ -34,6 +34,7 @@ class FieldsController extends Controller
 		$field->state 			= $input[ 'state' ];
 		$field->zip 			= $input[ 'zip' ];
 		$field->alcohol_allowed = $input[ 'alcohol_allowed' ];
+		$field->pets_allowed 	= $input[ 'pets_allowed' ];
 		$field->night_games 	= $input[ 'night_games' ];
 		$field->active 			= 1;
 

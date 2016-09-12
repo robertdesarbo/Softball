@@ -83,6 +83,7 @@ $factory->define(App\Field::class, function (Faker\Generator $faker) {
         'state' => $faker->state,
         'zip' => $faker->postcode,
         'alcohol_allowed' => $faker->boolean,
+        'pets_allowed' => $faker->boolean,
         'night_games' => $faker->boolean,
         #'active' => $faker->boolean,
         'active' => 1,

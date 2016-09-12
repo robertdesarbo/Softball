@@ -7,6 +7,8 @@
 @section('content')
 	<h2>{{ $division_name }}</h2>
 
+	<hr>
+
 	@include( 'errors.list' )
 
 	@if( count( $sessions ) > 0 )
