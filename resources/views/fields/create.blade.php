@@ -103,7 +103,7 @@
 		</div>
 
 		<div class="form-group">
-	        {{ Form::label('pets_allowed', 'Alcohol Allowed', ['class' => 'form-check-label' ] ) }}
+	        {{ Form::label('pets_allowed', 'Pets Allowed', ['class' => 'form-check-label' ] ) }}
 	        {{ Form::select('pets_allowed',array( "0" => "No", "1" => "Yes" ), null, array( 'class' => 'form-control' ) ) }}
 		</div>
 
