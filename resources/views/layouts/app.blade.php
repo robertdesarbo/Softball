@@ -69,7 +69,7 @@
 
 	            </ul>
 			</div>
-			<div class="col-xs-10 col-md-10 main-container">
+			<div class="col-xs-10 col-md-10 main-container" style='padding-left:30px;'>
 				@yield('content')
 			</div>
 		@else

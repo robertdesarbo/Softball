@@ -33,7 +33,7 @@
 
 .sidebar-styling
 {
-  padding-top: 60px;
+  padding-top: 65px;
   border: 1px solid gray;
   background-color: #eee;
   background-repeat: repeat;
@@ -154,7 +154,7 @@ a:focus {
   .navbar-custom.top-nav-collapse {
     padding: 0;
     background-color: #2b396b;
-    border-bottom: 1px solid 1px solid rgba(23,23,25,.3);
+    border-bottom: 1px solid rgba(23,23,25,.3);
   }
 }
 .intro {
@@ -357,7 +357,7 @@ body {
 
 .main-container
 {
-  padding-top:70px;
+  padding-top:75px;
 } 
 
 h2
@@ -400,6 +400,12 @@ hr
 .cd-timeline-content::before
 {
     border-left-color: #d5dfe6;
+    border-width: 9px;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content::before
+{
+  border-right-color: #d5dfe6;
 }
 
 .cssanimations .cd-timeline-img.is-hidden {
@@ -435,11 +441,25 @@ hr
 .cd-timeline-content
 {
   padding: .75em;
+  box-shadow: 0 1px 0 #ddd;
 }
 
 .cd-timeline-content p
 {
   margin: .5em 0;
+}
+
+.cd-timeline-content h2
+{
+   text-transform: none;
+
+}
+
+.cd-timeline-content .cd-date
+{
+    top: 0px;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .cd-timeline-img.cd-picture.pending
@@ -468,17 +488,4 @@ hr
     margin-top: 23%;
     text-align: center;
     width: 100%;
-}
-
-.cd-timeline-content h2
-{
-   text-transform: none;
-
-}
-
-.cd-timeline-content .cd-date
-{
-    top: 0px;
-    font-size: 1.2rem;
-    font-weight: 700;
 }
